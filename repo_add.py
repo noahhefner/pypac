@@ -7,7 +7,7 @@ def main():
         description='Arch package manager, written in Python'
     )
 
-    parser.add_argument("command")
+    parser.add_argument("db_path")
 
     parser.add_argument("package_name")
 
