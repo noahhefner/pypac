@@ -8,7 +8,7 @@ import argparse
 import tempfile
 import tarfile
 
-def prepare_repo_db():
+def prepare_repo_db(db: Path, lockfile: Path):
 
     """
     acquire file lock on lock file
@@ -67,6 +67,8 @@ def main():
     # TODO: Verify PGP signature
 
     # TODO: Prep database
+    lockfile = Path(args.db_path + ".lck")
+    prepare_repo_db(db, lockfile)
 
     # add()
     
